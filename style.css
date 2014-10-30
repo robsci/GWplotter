@@ -98,6 +98,17 @@ div#customise_button:hover {
   color:Black;
 }
 
+div#redirect_notice {
+  display: none;
+  width: 500px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px;
+  background-color: #F0F0F0;
+  border-radius: 5px;
+}
+
 /* options table */
 table.options td.firstcol {
   font-weight:bold;

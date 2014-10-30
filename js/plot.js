@@ -562,6 +562,10 @@ $( document ).ready(function() {
 	}).on("resize", function() {
 		var headheight = parseInt($('#header').css("height").slice(0,-2));
 		$('#content').css("padding-top", String(Math.max(headheight+20,100))+"px");
-	});	
+	});
+	
+	if (window.location.hash == "#redirect") {
+		$('#redirect_notice').show();
+	}
 });
 
