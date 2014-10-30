@@ -372,9 +372,9 @@ $( document ).ready(function() {
 					html += Supernovaeoptions(this.index, this.params);
 				}			
 
-				if (this.index == 6) { // add CBC options
-					html += CBCoptions(this.index, this.params);
-				}	
+				//if (this.index == 6) { // add CBC options
+				//	html += CBCoptions(this.index, this.params);
+				//}	
 
 				var color = "<div class=\"parameter\">\
 					<label for='id" + this.index + "color'>Colour: </label>\
