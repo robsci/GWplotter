@@ -1,0 +1,618 @@
+{"1" : {"name" : "Stochastic background", 
+"datafile" : "data\/sources\/sto_back.json", 
+"type" : -1, 
+"default" : 1, 
+"color" : "rgb(204,102,0)", 
+"plotlabels" : [
+	"Stochastic\nbackground", 
+	"Stochastic\nbackground", 
+	"Stochastic\nbackground"
+], 
+"labelpos" : [
+[
+		4.50e-11, 
+		1.50e-13
+	], 
+[
+		4.50e-11, 
+		3.0e-8
+	], 
+[
+		4.50e-11, 
+		1.0e-9
+	]
+]},
+"2" : {"name" : "Supermassive binaries", 
+"datafile" : "data\/sources\/supermassive_mergers.json", 
+"type" : -1, 
+"default" : 0, 
+"color" : "rgb(230,153,0)", 
+"plotlabels" : [
+	"Supermassive\nbinaries", 
+	"Supermassive\nbinaries", 
+	"Supermassive\nbinaries"
+], 
+"labelpos" : [
+[
+		3.50e-7, 
+		1.0e-17
+	], 
+[
+		5.0e-9, 
+		5.0e-9
+	], 
+[
+		4.0e-9, 
+		0.001
+	]
+]},
+"3" : {"name" : "Resolvable galactic binaries", 
+"datafile" : "data\/sources\/gal_bins.json", 
+"type" : -2, 
+"default" : 0, 
+"color" : "rgb(89,178,230)", 
+"plotlabels" : [
+	"Resolvable galactic\nbinaries", 
+	"Resolvable galactic\nbinaries", 
+	"Resolvable galactic\nbinaries"
+], 
+"labelpos" : [
+[
+		0.0025, 
+		1.50e-18
+	], 
+[
+		0.002, 
+		9.0e-17
+	], 
+[
+		0.0005, 
+		0.03
+	]
+]},
+"4" : {"name" : "Unresolvable galactic binaries", 
+"datafile" : "data\/sources\/unresv_gal_bins.json", 
+"type" : -2, 
+"default" : 0, 
+"color" : "rgb(0,255,0)", 
+"plotlabels" : [
+	"Unresolvable\ngalactic binaries", 
+	"Unresolvable\ngalactic\nbinaries", 
+	"Unresolvable\ngalactic binaries"
+], 
+"labelpos" : [
+[
+		5.0e-7, 
+		1.0e-21
+	], 
+[
+		1.30e-6, 
+		1.30e-21
+	], 
+[
+		4.0e-7, 
+		3.0e-12
+	]
+]},
+"5" : {"name" : "Massive binaries", 
+"datafile" : "data\/sources\/massive_mergers.json", 
+"type" : -2, 
+"default" : 1, 
+"color" : "rgb(0,115,178)", 
+"plotlabels" : [
+	"Massive binaries", 
+	"Massive binaries", 
+	"Massive binaries"
+], 
+"labelpos" : [
+[
+		0.0001, 
+		2.0e-17
+	], 
+[
+		0.00033, 
+		2.0e-15
+	], 
+[
+		0.0001, 
+		0.0015
+	]
+]},
+"6" : {"name" : "Extreme mass ratio inspirals", 
+"datafile" : "data\/sources\/emris.json", 
+"type" : -2, 
+"default" : 1, 
+"color" : "rgb(0,153,128)", 
+"plotlabels" : [
+	"Extreme mass\nratio inspirals", 
+	"Extreme mass\nratio inspirals", 
+	"Extreme mass ratio inspirals"
+], 
+"labelpos" : [
+[
+		9.0e-7, 
+		2.0e-20
+	], 
+[
+		9.0e-7, 
+		2.0e-19
+	], 
+[
+		0.0000105, 
+		0.00015
+	]
+]},
+"7" : {"name" : "Compact binary inspirals", 
+"datafile" : "data\/sources\/cbcs.json", 
+"type" : -3, 
+"default" : 1, 
+"color" : "rgb(204,153,178)", 
+"plotlabels" : [
+	"Compact binary\ninspirals", 
+	"Compact binary\ninspirals", 
+	"Compact binary\ninspirals"
+], 
+"labelpos" : [
+[
+		3.0e3, 
+		3.0e-23
+	], 
+[
+		30.0, 
+		2.50e-19
+	], 
+[
+		2.0e3, 
+		8.0e-10
+	]
+]},
+"8" : {"name" : "Supernovae", 
+"datafile" : "data\/sources\/supernovae.json", 
+"type" : -3, 
+"default" : 0, 
+"color" : "rgb(128,0,128)", 
+"plotlabels" : [
+	"Supernovae", 
+	"Supernovae", 
+	"Supernovae"
+], 
+"labelpos" : [
+[
+		3.0e3, 
+		3.0e-24
+	], 
+[
+		100.0, 
+		1.50e-20
+	], 
+[
+		2.0e3, 
+		8.0e-12
+	]
+]},
+"9" : {"name" : "Pulsars", 
+"datafile" : "data\/sources\/pulsars.json", 
+"type" : -3, 
+"default" : 0, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"Pulsars", 
+	"Pulsars", 
+	"Pulsars"
+], 
+"labelpos" : [
+[
+		3.0e3, 
+		5.0e-25
+	], 
+[
+		300.0, 
+		2.50e-21
+	], 
+[
+		2.0e3, 
+		8.0e-14
+	]
+]},
+"10" : {"name" : "EPTA", 
+"datafile" : "data\/detectors\/EPTA.json", 
+"type" : 0, 
+"default" : 1, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"EPTA", 
+	"EPTA", 
+	"EPTA"
+], 
+"labelpos" : [
+[
+		2.0e-6, 
+		5.0e-13
+	], 
+[
+		2.0e-6, 
+		6.0e-10
+	], 
+[
+		1.80e-6, 
+		2.0
+	]
+], 
+"params" : {
+	"T" : 3.155760e8, 
+	"deltaT" : 1.20960e6, 
+	"deltatrms" : 1.0e-7, 
+	"Np" : 5.0
+}},
+"11" : {"name" : "IPTA", 
+"datafile" : "data\/detectors\/IPTA.json", 
+"type" : 0, 
+"default" : 0, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"IPTA", 
+	"IPTA", 
+	"IPTA"
+], 
+"labelpos" : [
+[
+		2.0e-6, 
+		1.0e-13
+	], 
+[
+		2.0e-6, 
+		1.40e-10
+	], 
+[
+		1.80e-6, 
+		0.05
+	]
+], 
+"params" : {
+	"T" : 4.733640e8, 
+	"deltaT" : 1.20960e6, 
+	"deltatrms" : 1.0e-7, 
+	"Np" : 20.0
+}},
+"12" : {"name" : "SKA", 
+"datafile" : "data\/detectors\/SKA.json", 
+"type" : 0, 
+"default" : 0, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"SKA", 
+	"SKA", 
+	"SKA"
+], 
+"labelpos" : [
+[
+		2.0e-6, 
+		7.50e-15
+	], 
+[
+		2.0e-6, 
+		1.0e-11
+	], 
+[
+		1.80e-6, 
+		0.00013
+	]
+], 
+"params" : {
+	"T" : 6.311520e8, 
+	"deltaT" : 1.20960e6, 
+	"deltatrms" : 3.0e-8, 
+	"Np" : 100.0
+}},
+"13" : {"name" : "eLISA", 
+"datafile" : "data\/detectors\/eLISA.json", 
+"type" : 2, 
+"default" : 1, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"eLISA", 
+	"eLISA", 
+	"eLISA"
+], 
+"labelpos" : [
+[
+		1.50e-6, 
+		7.0e-17
+	], 
+[
+		1.180e-6, 
+		2.90e-14
+	], 
+[
+		1.60e-6, 
+		9.0e-7
+	]
+]},
+"14" : {"name" : "LISA", 
+"datafile" : "data\/detectors\/LISA.json", 
+"type" : 2, 
+"default" : 0, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"LISA", 
+	"LISA", 
+	"LISA"
+], 
+"labelpos" : [
+[
+		2.0e-6, 
+		1.0e-18
+	], 
+[
+		1.50e-6, 
+		4.0e-16
+	], 
+[
+		2.10e-6, 
+		2.0e-10
+	]
+]},
+"15" : {"name" : "DECIGO", 
+"datafile" : "data\/detectors\/DECIGO.json", 
+"type" : 2, 
+"default" : 0, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"DECIGO", 
+	"DECIGO", 
+	"DECIGO"
+], 
+"labelpos" : [
+[
+		0.07, 
+		1.0e-23
+	], 
+[
+		0.09, 
+		2.0e-23
+	], 
+[
+		0.03, 
+		6.0e-13
+	]
+]},
+"16" : {"name" : "BBO", 
+"datafile" : "data\/detectors\/BBO.json", 
+"type" : 2, 
+"default" : 0, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"BBO", 
+	"BBO", 
+	"BBO"
+], 
+"labelpos" : [
+[
+		0.0042, 
+		2.0e-24
+	], 
+[
+		0.0035, 
+		9.0e-24
+	], 
+[
+		0.03, 
+		1.820e-14
+	]
+]},
+"17" : {"name" : "TAMA", 
+"datafile" : "data\/detectors\/TAMA.json", 
+"type" : 1, 
+"default" : 0, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"TAMA", 
+	"TAMA", 
+	"TAMA"
+], 
+"labelpos" : [
+[
+		8.0e4, 
+		3.0e-18
+	], 
+[
+		8.0e4, 
+		3.20e-20
+	], 
+[
+		2.0e4, 
+		3.0
+	]
+]},
+"18" : {"name" : "GEO", 
+"datafile" : "data\/detectors\/GEO.json", 
+"type" : 1, 
+"default" : 0, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"GEO", 
+	"GEO", 
+	"GEO"
+], 
+"labelpos" : [
+[
+		8.0e4, 
+		1.550e-18
+	], 
+[
+		8.0e4, 
+		1.150e-20
+	], 
+[
+		2.0e4, 
+		1.0
+	]
+]},
+"19" : {"name" : "LIGO", 
+"datafile" : "data\/detectors\/LIGO.json", 
+"type" : 1, 
+"default" : 0, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"LIGO", 
+	"LIGO", 
+	"LIGO"
+], 
+"labelpos" : [
+[
+		8.0e4, 
+		7.990e-19
+	], 
+[
+		8.0e4, 
+		4.120e-21
+	], 
+[
+		2.0e4, 
+		0.3
+	]
+]},
+"20" : {"name" : "VIRGO", 
+"datafile" : "data\/detectors\/VIRGO.json", 
+"type" : 1, 
+"default" : 0, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"VIRGO", 
+	"VIRGO", 
+	"VIRGO"
+], 
+"labelpos" : [
+[
+		8.0e4, 
+		4.120e-19
+	], 
+[
+		8.0e4, 
+		1.480e-21
+	], 
+[
+		2.0e4, 
+		0.1
+	]
+]},
+"21" : {"name" : "aLIGO", 
+"datafile" : "data\/detectors\/aLIGO.json", 
+"type" : 1, 
+"default" : 1, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"aLIGO", 
+	"aLIGO", 
+	"aLIGO"
+], 
+"labelpos" : [
+[
+		8.0e4, 
+		1.10e-19
+	], 
+[
+		8.0e4, 
+		1.910e-22
+	], 
+[
+		2.0e4, 
+		0.01
+	]
+]},
+"22" : {"name" : "aVIRGO", 
+"datafile" : "data\/detectors\/aVIRGO.json", 
+"type" : 1, 
+"default" : 0, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"aVIRGO", 
+	"aVIRGO", 
+	"aVIRGO"
+], 
+"labelpos" : [
+[
+		8.0e4, 
+		2.130e-19
+	], 
+[
+		8.0e4, 
+		5.320e-22
+	], 
+[
+		2.0e4, 
+		0.03
+	]
+]},
+"23" : {"name" : "KAGRA", 
+"datafile" : "data\/detectors\/KAGRA.json", 
+"type" : 1, 
+"default" : 0, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"KAGRA", 
+	"KAGRA", 
+	"KAGRA"
+], 
+"labelpos" : [
+[
+		8.0e4, 
+		5.660e-20
+	], 
+[
+		8.0e4, 
+		6.850e-23
+	], 
+[
+		2.0e4, 
+		0.003
+	]
+]},
+"24" : {"name" : "ET", 
+"datafile" : "data\/detectors\/ET.json", 
+"type" : 1, 
+"default" : 0, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"ET", 
+	"ET", 
+	"ET"
+], 
+"labelpos" : [
+[
+		8.0e4, 
+		2.920e-20
+	], 
+[
+		8.0e4, 
+		2.460e-23
+	], 
+[
+		2.0e4, 
+		0.001
+	]
+]},
+"25" : {"name" : "ALIA", 
+"datafile" : "data\/detectors\/ALIA.json", 
+"type" : 2, 
+"default" : 0, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"ALIA", 
+	"ALIA", 
+	"ALIA"
+], 
+"labelpos" : [
+[
+		0.1, 
+		7.0e-22
+	], 
+[
+		0.1, 
+		1.80e-21
+	], 
+[
+		0.025, 
+		2.0e-10
+	]
+]}}

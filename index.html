@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>Gravitational Wave Sensitivity Curve Plotter</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="../../excanvas.min.js"></script><![endif]-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/jquery.flot.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/jquery.flot.canvas.js"></script>
+	<script language="javascript" type="text/javascript" src="js/scalings.js"></script>
+	<script language="javascript" type="text/javascript" src="js/plot.js"></script>
+</head>
+<body>
+
+<div id="header">
+	<h1>Gravitational Wave Detectors and Sources</h1>
+	<div id="authors">
+		By <a href="http://www.ast.cam.ac.uk/people/Christopher.Moore">Christopher Moore</a>, <a href="http://rhcole.com">Robert Cole</a> 
+			and <a href="http://www.sr.bham.ac.uk/~cplb">Christopher Berry</a> from the 
+			<a href="http://www.ast.cam.ac.uk/research/cosmology.and.fundamental.physics/gravitational.waves">Gravitational Wave Group</a> 
+			at the <a href="http://www.ast.cam.ac.uk">Institute of Astronomy</a>, University of Cambridge
+	</div>
+</div>
+
+<div id="content">
+	<div id="customise_button">Customise Plot</div>
+	<div id="placeholder" class="plot-placeholder" style="width:1000px;height:637px;margin:0 auto;display:none;"></div>
+
+	<img id="canvasImg" alt="Sorry, this only works with modern browsers that support Javascript and HTML5." style="display:block;margin:0 auto;text-align:center;">
+
+	<div id="info">For details of the data and various conventions used, see <a href="http://arxiv.org/abs/1408.0740">this paper</a> on the arXiv.</div>
+	<div id="tablehead">Choose options</div>
+	<div id="options">
+		<table id="plot-table" class="options">
+			<tr>
+				<td class="firstcol">Plot:</td>				
+				<td class="check"><input class="display" type="radio" name="plottype" value=0 checked></input></td>
+				<td class="label">Characteristic Strain</td>
+				<td class="check"><input class="display" type="radio" name="plottype" value=1></input></td>
+				<td class="label">Power Spectral Density</td>
+				<td class="check"><input class="display" type="radio" name="plottype" value=2></input></td>
+				<td class="label">Energy Spectrum</td>
+			</tr>
+			<tr id="plot-options" class="options">
+				<td class="top"><div id="plotreset" class="optionbutton">Reset Axes</div></td>	
+				<td class="check"></td>
+				<td class="label" style="position:relative;">
+					<div class="expand-button" id='plotexpand0'>
+						<div class="arrow-down"></div>
+					</div>
+					<div class="plotparams" id="plotparams0">
+						<div class="plotparam">
+							<label for='plotfmin0'>f<sub>min</sub></label>
+							<input type='text' class='plotfmin' name='plotfmin0' id='idplotfmin0' value='0.4e-10'>
+						</div>
+						<div class="plotparam">
+							<label for='plotfmax0'>f<sub>max</sub></label>
+							<input type='text' class='plotfmax' name='plotfmax0' id='idplotfmax0' value='1.2e6'>
+						</div>
+						<div class="plotparam">
+							<label for='plotymin0'>hc<sub>min</sub></label>
+							<input type='text' class='plotymin' name='plotymin0' id='idplotymin0' value='1e-26'>
+						</div>
+						<div class="plotparam">
+							<label for='plotymax0'>hc<sub>max</sub></label>
+							<input type='text' class='plotymax' name='plotymax0' id='idplotymax0' value='1.1e-12'>
+						</div>
+					</div>
+				</td>
+				<td class="check"></td>
+				<td class="label" style="position:relative;">
+					<div class="expand-button" id='plotexpand1'>
+						<div class="arrow-down"></div>
+					</div>
+					<div class="plotparams" id="plotparams1">
+						<div class="plotparam">
+							<label for='plotfmin1'>f<sub>min</sub></label>
+							<input type='text' class='plotfmin' name='plotfmin1' id='idplotfmin1' value='0.4e-10'>
+						</div>
+						<div class="plotparam">
+							<label for='plotfmax1'>f<sub>max</sub></label>
+							<input type='text' class='plotfmax' name='plotfmax1' id='idplotfmax1' value='1.2e6'>
+						</div>
+						<div class="plotparam">
+							<label for='plotymin1'>PSD<sub>min</sub></label>
+							<input type='text' class='plotymin' name='plotymin1' id='idplotymin1' value='1e-26'>
+						</div>
+						<div class="plotparam">
+							<label for='plotymax1'>PSD<sub>max</sub></label>
+							<input type='text' class='plotymax' name='plotymax1' id='idplotymax1' value='1.1e-6'>
+						</div>
+					</div>
+				</td>
+				<td class="check"></td>
+				<td class="label" style="position:relative;">
+					<div class="expand-button" id='plotexpand2'>
+						<div class="arrow-down"></div>
+					</div>
+					<div class="plotparams" id="plotparams2">
+						<div class="plotparam">
+							<label for='plotfmin2'>f<sub>min</sub></label>
+							<input type='text' class='plotfmin' name='plotfmin2' id='idplotfmin2' value='0.4e-10'>
+						</div>
+						<div class="plotparam">
+							<label for='plotfmax2'>f<sub>max</sub></label>
+							<input type='text' class='plotfmax' name='plotfmax2' id='idplotfmax2' value='1.2e6'>
+						</div>
+						<div class="plotparam">
+							<label for='plotymin2'>&Omega;<sub>min</sub></label>
+							<input type='text' class='plotymin' name='plotymin2' id='idplotymin2' value='1e-15'>
+						</div>
+						<div class="plotparam">
+							<label for='plotymax2'>&Omega;<sub>max</sub></label>
+							<input type='text' class='plotymax' name='plotymax2' id='idplotymax2' value='1.1e3'>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		
+		<table id="detector-table" class="options">
+			<tr id="pulsar-timing">
+				<td class="firstcol">Detectors:</td>
+				<td class="check"></td>
+				<td class="secondcol label">Pulsar Timing:</td>
+			</tr>
+			<tr id="pulsar-timing-options" class="options">
+				<td class="top" rowspan="5">
+					<div id="selectalldetectors" class="optionbutton">Select All</div>
+					<div id="clearalldetectors" class="optionbutton">Clear All</div>
+					<div id="addNewPTA" class="optionbutton">New PTA</div>
+				</td>				
+				<td class="check"></td>
+				<td class="label"></td>
+			</tr>
+			<tr id="space-based">
+				<td class="check"></td>
+				<td class="secondcol label">Space-based:</td>
+			</tr>
+			<tr id="space-based-options" class="options">			
+				<td class="check"></td>
+				<td class="label"></td>
+			</tr>
+			<tr id="ground-based">
+				<td class="check"></td>
+				<td class="secondcol label">Ground-based:</td>
+			</tr>
+			<tr id="ground-based-options" class="options">			
+				<td class="check"></td>
+				<td class="label"></td>
+			</tr>
+		</table>
+		
+		<table id="source-table" class="options">
+			<tr id="v-low-freq">
+				<td class="firstcol">Sources:</td>
+				<td class="check"></td>
+				<td class="secondcol label">Very low frequency:</td>
+			</tr>
+			<tr id="v-low-freq-options" class="options">
+				<td class="top" rowspan="5">
+					<div id="selectallsources" class="optionbutton">Select All</div>
+					<div id="clearallsources" class="optionbutton">Clear All</div>
+				</td>				
+				<td class="check"></td>
+				<td class="label"></td>
+			</tr>
+			<tr id="low-freq">
+				<td class="check"></td>
+				<td class="secondcol label">Low frequency:</td>
+			</tr>
+			<tr id="low-freq-options" class="options">			
+				<td class="check"></td>
+				<td class="label"></td>
+			</tr>
+			<tr id="high-freq">
+				<td class="check"></td>
+				<td class="secondcol label">High frequency:</td>
+			</tr>
+			<tr id="high-freq-options" class="options">			
+				<td class="check"></td>
+				<td class="label"></td>
+			</tr>
+		</table>
+	
+	</div>
+	
+	<div id="footer">
+		<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB">
+			<img alt="Creative Commons Licence" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
+		</a><br />
+		
+		<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/StillImage" property="dct:title" rel="dct:type">
+			Gravitational Wave Sensitivity Curve Plotter
+		</span> 
+		
+		by 
+		<a xmlns:cc="http://creativecommons.org/ns#" href="http://rhcole.com/apps/GWplotter" property="cc:attributionName" rel="cc:attributionURL">
+			Christopher Moore, Robert Cole and Christopher Berry
+		</a> 
+		
+		is licensed under a 
+		<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB">
+			Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License
+		</a>
+		. For citation details, please refer to the 
+		<a href="http://arxiv.org/abs/1408.0740">arXiv paper</a>.
+		
+		<div id="version"></div>
+	</div>
+</div>
+</body>
+</html>
