@@ -1,4 +1,4 @@
-function transformData(data, display, type, dataparams, params) {
+function transformData(data, display, type, index, dataparams, params) {
 	var outdata = data;
 	
 	switch(type) {
@@ -6,7 +6,19 @@ function transformData(data, display, type, dataparams, params) {
 			outdata = transformPTA(outdata, dataparams, params);
 			break;
 	}
+
+	if(index==8){
+		outdata = transformPulsars(outdata, dataparams, params);
+	}
+
+	if(index==7){
+		outdata = transformSupernovae(outdata, dataparams, params);
+	}
 	
+	if(index==6){
+		outdata = transformCBC(outdata, dataparams, params);
+	}
+
 	switch(display) {
 		case 1:
 			outdata = toPSD(outdata);
@@ -39,6 +51,30 @@ function transformPTA(data, params0, params) {
 	});
 }
 
+function transformPulsars(data, params0, params) {
+	
+	return data.map(function(val, index) {
+		y=val[1]*(params.A/params0.A);
+		return [val[0], y];
+	});
+}
+
+function transformSupernovae(data, params0, params) {
+	
+	return data.map(function(val, index) {
+		y=val[1]*(params0.D/params.D);
+		return [val[0], y];
+	});
+}
+
+function transformCBC(data, params0, params) {
+	
+	return data.map(function(val, index) {
+		y=val[1]*(params0.A/params.A);
+		return [val[0], y];
+	});
+}
+
 function PTAoptions(index, params) {
 	var numPulsars = "<div class=\"parameter\">\
 		<label for='id" + index + "Np'>Number of pulsars: </label>\
@@ -61,6 +97,30 @@ function PTAoptions(index, params) {
 		</div>";
 	
 	return numPulsars + T + dt + dtrms;
+}
+
+function Pulsarsoptions(index, params) {
+	var A = "<div class=\"parameter\">\
+		<label for='id" + index + "Amp'>Amplitude Scale: </label>\
+		<input type='text' class='Amp' name='" + index + "Amp' id='id" + index + "Amp' value='" + params.A + "' title='The default amplitude corresponds to the spin down limit on the Crab pulsar (i.e. the amplitude of GWs if the pulsar spin-down is entirely due to GW emission). Changing this value scales the amplitude. The characteristic strain is proportional to the ellipticity of the pulsar divided by distance.'>\
+		</div>";
+	return A;
+}
+
+function Supernovaeoptions(index, params) {
+	var A = "<div class=\"parameter\">\
+		<label for='id" + index + "Dist'>Distance (kpc): </label>\
+		<input type='text' class='Dist' name='" + index + "Dist' id='id" + index + "Dist' value='" + params.D + "' title='We consider supernova of fixed intrinsic amplitude given by Dimmelmeier et at. (2002). The characteristic strain ~1/D.'>\
+		</div>";
+	return A;
+}
+
+function CBCoptions(index, params) {
+	var A = "<div class=\"parameter\">\
+		<label for='id" + index + "AmpCBC'>Distance: </label>\
+		<input type='text' class='AmpCBC' name='" + index + "AmpCBC' id='id" + index + "AmpCBC' value='" + params.A + "' title='test text'>\
+		</div>";
+	return A;
 }
 
 function toPSD(data) {

@@ -165,7 +165,8 @@
 		2.0e3, 
 		8.0e-10
 	]
-]},
+], 
+"params" : {"A" : 1.0}},
 "8" : {"name" : "Supernovae", 
 "datafile" : "data\/sources\/supernovae.json", 
 "type" : -3, 
@@ -189,7 +190,8 @@
 		2.0e3, 
 		8.0e-12
 	]
-]},
+], 
+"params" : {"D" : 300.0}},
 "9" : {"name" : "Pulsars", 
 "datafile" : "data\/sources\/pulsars.json", 
 "type" : -3, 

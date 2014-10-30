@@ -267,7 +267,7 @@ $( document ).ready(function() {
 		this.plotdata = function(display) {
 			//display = typeof display !== 'undefined' ? display : plotDisplay;
 			var outdata = {};
-			outdata.data = transformData(this.hcdata, display, this.type, this.dataparams, this.params);
+			outdata.data = transformData(this.hcdata, display, this.type, this.index, this.dataparams, this.params);
 			outdata.color = this.color;
 			if (this.type < 0) {
 				try {
@@ -363,7 +363,19 @@ $( document ).ready(function() {
 				if (this.type == 0) { // add PTA options
 					html += PTAoptions(this.index, this.params);
 				}
-			
+
+				if (this.index == 8) { // add Pulsars options
+					html += Pulsarsoptions(this.index, this.params);
+				}
+
+				if (this.index == 7) { // add Supernovae options
+					html += Supernovaeoptions(this.index, this.params);
+				}			
+
+				if (this.index == 6) { // add CBC options
+					html += CBCoptions(this.index, this.params);
+				}	
+
 				var color = "<div class=\"parameter\">\
 					<label for='id" + this.index + "color'>Colour: </label>\
 					<input type='text' class='color' name='" + this.index + "color' id='id" + this.index + "color' value='" + this.color + "' title='Colour may be specified using RGB values (eg rgb(0,0,0)), hex value (#000000), or by name (Black).'>\
@@ -534,6 +546,27 @@ $( document ).ready(function() {
 				var newval = parseFloat($(this).val());
 				if (!isNaN(newval)) {
 					datasets[$(this).attr('name').slice(0,-5)].params.deltatrms = newval;
+					plotGraph(plotDisplay);
+				}
+			})
+			.on('change', 'input.Amp', function() {
+				var newval = parseFloat($(this).val());
+				if (!isNaN(newval)) {
+					datasets[$(this).attr('name').slice(0,-3)].params.A = newval;
+					plotGraph(plotDisplay);
+				}
+			})
+			.on('change', 'input.Dist', function() {
+				var newval = parseFloat($(this).val());
+				if (!isNaN(newval)) {
+					datasets[$(this).attr('name').slice(0,-4)].params.D = newval;
+					plotGraph(plotDisplay);
+				}
+			})
+			.on('change', 'input.AmpCBC', function() {
+				var newval = parseFloat($(this).val());
+				if (!isNaN(newval)) {
+					datasets[$(this).attr('name').slice(0,-6)].params.A = newval;
 					plotGraph(plotDisplay);
 				}
 			});
