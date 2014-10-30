@@ -213,7 +213,8 @@
 		2.0e3, 
 		8.0e-14
 	]
-]},
+], 
+"params" : {"A" : 1.0}},
 "10" : {"name" : "EPTA", 
 "datafile" : "data\/detectors\/EPTA.json", 
 "type" : 0, 
