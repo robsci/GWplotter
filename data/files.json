@@ -481,9 +481,9 @@
 "default" : 0, 
 "color" : "rgb(0,0,0)", 
 "plotlabels" : [
-	"VIRGO", 
-	"VIRGO", 
-	"VIRGO"
+	"Virgo", 
+	"Virgo", 
+	"Virgo"
 ], 
 "labelpos" : [
 [
@@ -529,9 +529,9 @@
 "default" : 0, 
 "color" : "rgb(0,0,0)", 
 "plotlabels" : [
-	"aVIRGO", 
-	"aVIRGO", 
-	"aVIRGO"
+	"AdV", 
+	"AdV", 
+	"AdV"
 ], 
 "labelpos" : [
 [
