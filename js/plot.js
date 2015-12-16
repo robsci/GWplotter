@@ -599,6 +599,10 @@ $( document ).ready(function() {
 	
 	if (window.location.hash == "#redirect") {
 		$('#redirect_notice').show();
+		ga('send', 'exception', {
+		  'exDescription': 'redirected from old site',
+		  'exFatal': false
+		});
 	}
 });
 
