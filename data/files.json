@@ -475,7 +475,55 @@
 		0.3
 	]
 ]},
-"20" : {"name" : "VIRGO", 
+"20" : {"name" : "aLIGO - O1 sensitivity", 
+"datafile" : "data\/detectors\/aLIGO-O1.json", 
+"type" : 1, 
+"default" : 1, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"aLIGO (O1)", 
+	"aLIGO (O1)", 
+	"aLIGO (O1)"
+], 
+"labelpos" : [
+[
+		4.0e4, 
+		1.10e-19
+	], 
+[
+		4.0e4, 
+		1.910e-22
+	], 
+[
+		2.0e4, 
+		0.01
+	]
+]},
+"21" : {"name" : "aLIGO - Design Sensitivity", 
+"datafile" : "data\/detectors\/aLIGO.json", 
+"type" : 1, 
+"default" : 1, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"aLIGO", 
+	"aLIGO", 
+	"aLIGO"
+], 
+"labelpos" : [
+[
+		8.0e4, 
+		5.68e-20
+	], 
+[
+		8.0e4, 
+		6.856e-23
+	], 
+[
+		2.0e4, 
+		0.003
+	]
+]},
+"22" : {"name" : "Virgo", 
 "datafile" : "data\/detectors\/VIRGO.json", 
 "type" : 1, 
 "default" : 0, 
@@ -499,31 +547,7 @@
 		0.1
 	]
 ]},
-"21" : {"name" : "aLIGO", 
-"datafile" : "data\/detectors\/aLIGO.json", 
-"type" : 1, 
-"default" : 1, 
-"color" : "rgb(0,0,0)", 
-"plotlabels" : [
-	"aLIGO", 
-	"aLIGO", 
-	"aLIGO"
-], 
-"labelpos" : [
-[
-		8.0e4, 
-		1.10e-19
-	], 
-[
-		8.0e4, 
-		1.910e-22
-	], 
-[
-		2.0e4, 
-		0.01
-	]
-]},
-"22" : {"name" : "aVIRGO", 
+"23" : {"name" : "AdV", 
 "datafile" : "data\/detectors\/aVIRGO.json", 
 "type" : 1, 
 "default" : 0, 
@@ -547,7 +571,7 @@
 		0.03
 	]
 ]},
-"23" : {"name" : "KAGRA", 
+"24" : {"name" : "KAGRA", 
 "datafile" : "data\/detectors\/KAGRA.json", 
 "type" : 1, 
 "default" : 0, 
@@ -556,30 +580,6 @@
 	"KAGRA", 
 	"KAGRA", 
 	"KAGRA"
-], 
-"labelpos" : [
-[
-		8.0e4, 
-		5.660e-20
-	], 
-[
-		8.0e4, 
-		6.850e-23
-	], 
-[
-		2.0e4, 
-		0.003
-	]
-]},
-"24" : {"name" : "ET", 
-"datafile" : "data\/detectors\/ET.json", 
-"type" : 1, 
-"default" : 0, 
-"color" : "rgb(0,0,0)", 
-"plotlabels" : [
-	"ET", 
-	"ET", 
-	"ET"
 ], 
 "labelpos" : [
 [
@@ -594,8 +594,33 @@
 		2.0e4, 
 		0.001
 	]
+]
+},
+"25" : {"name" : "ET", 
+"datafile" : "data\/detectors\/ET.json", 
+"type" : 1, 
+"default" : 0, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"ET", 
+	"ET", 
+	"ET"
+], 
+"labelpos" : [
+[
+		8.0e4, 
+		1.51e-20
+	], 
+[
+		8.0e4, 
+		8.834e-24
+	], 
+[
+		2.0e4, 
+		0.0003
+	]
 ]},
-"25" : {"name" : "ALIA", 
+"26" : {"name" : "ALIA", 
 "datafile" : "data\/detectors\/ALIA.json", 
 "type" : 2, 
 "default" : 0, 
