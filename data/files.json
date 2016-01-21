@@ -167,20 +167,20 @@
 	]
 ], 
 "params" : {"A" : 1.0}},
-"8" : {"name" : "Supernovae", 
+"8" : {"name" : "Core collapse\nsupernovae", 
 "datafile" : "data\/sources\/supernovae.json", 
 "type" : -3, 
 "default" : 0, 
 "color" : "rgb(128,0,128)", 
 "plotlabels" : [
-	"Supernovae", 
-	"Supernovae", 
-	"Supernovae"
+	"Core collapse\nsupernovae", 
+	"Core collapse\nsupernovae", 
+	"Core collapse\nsupernovae"
 ], 
 "labelpos" : [
 [
 		3.0e3, 
-		3.0e-24
+		4.0e-24
 	], 
 [
 		100.0, 
@@ -209,7 +209,7 @@
 	], 
 [
 		300.0, 
-		2.50e-21
+		1.20e-21
 	], 
 [
 		2.0e3, 
@@ -642,5 +642,29 @@
 [
 		0.025, 
 		2.0e-10
+	]
+]},
+"27" : {"name" : "Type 1A supernovae", 
+"datafile" : "data\/sources\/supernovae_type1A.json", 
+"type" : -2, 
+"default" : 1, 
+"color" : "rgb(160,161,200)", 
+"plotlabels" : [
+	"Type 1A\nsupernovae", 
+	"Type 1A\nsupernovae", 
+	"Type 1A\nsupernovae"
+], 
+"labelpos" : [
+[
+		0.33, 
+		2.0e-20
+	], 
+[
+		1.0, 
+		4.0e-20
+	], 
+[
+		0.33, 
+		0.000015
 	]
 ]}}
