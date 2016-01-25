@@ -644,15 +644,15 @@
 		2.0e-10
 	]
 ]},
-"27" : {"name" : "Type 1A supernovae", 
+"27" : {"name" : "Type IA supernovae", 
 "datafile" : "data\/sources\/supernovae_type1A.json", 
 "type" : -2, 
 "default" : 1, 
 "color" : "rgb(160,161,200)", 
 "plotlabels" : [
-	"Type 1A\nsupernovae", 
-	"Type 1A\nsupernovae", 
-	"Type 1A\nsupernovae"
+	"Type IA\nsupernovae", 
+	"Type IA\nsupernovae", 
+	"Type IA\nsupernovae"
 ], 
 "labelpos" : [
 [
