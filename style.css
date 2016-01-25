@@ -16,6 +16,15 @@ h1 {
   transition: all 0.3s;
 }
 
+h2 {
+	font-size: 1.3em;
+}
+
+h3 {
+	font-size: 1em;
+	font-style:italic;
+}
+
 #header {
   width: 100%;
   min-height: 100px;
@@ -50,8 +59,8 @@ h1 {
 
 div#tablehead{
   font-weight:bold;
-  font-size:1.1em;
-  padding-bottom:5px;
+  font-size:1.3em;
+  padding:10px;
 }
 
 div#authors {
@@ -80,10 +89,6 @@ div#version {
   padding-top:5px;
 }
 
-div#info {
-  padding:5px;
-}
-
 div#customise_button {
   font-size:0.9em;
   padding-left:10px;
@@ -107,6 +112,14 @@ div#redirect_notice {
   padding: 5px;
   background-color: #F0F0F0;
   border-radius: 5px;
+}
+
+div#info {
+	padding: 10px;
+}
+
+div#info p {
+	padding-left:10px;
 }
 
 /* options table */
