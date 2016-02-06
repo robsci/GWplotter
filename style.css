@@ -122,6 +122,20 @@ div#info p {
 	padding-left:10px;
 }
 
+div#banner {
+        text-align:center;
+        color:DarkGrey;
+        font-weight:bold;
+	padding-top: 30px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+}
+
+div#banner a {
+        color:DarkGrey;
+}
+
 /* options table */
 table.options td.firstcol {
   font-weight:bold;
