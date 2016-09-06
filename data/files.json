@@ -691,4 +691,28 @@
 		4, 
 		0.15
 	]
+]},
+"29" : {"name" : "Cosmic Explorer (CE)", 
+"datafile" : "data\/detectors\/CosmicExplorer.json", 
+"type" : 1, 
+"default" : 0, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"CE", 
+	"CE", 
+	"CE"
+], 
+"labelpos" : [
+[
+		8.0e4, 
+		7.55e-21
+	], 
+[
+		8.0e4, 
+		3.18e-24
+	], 
+[
+		2.0e4, 
+		0.0001 
+	]
 ]}}
