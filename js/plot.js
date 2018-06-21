@@ -267,7 +267,7 @@ $( document ).ready(function() {
 		this.plotdata = function(display) {
 			//display = typeof display !== 'undefined' ? display : plotDisplay;
 			var outdata = {};
-			outdata.data = transformData(this.hcdata, display, this.type, this.index, this.dataparams, this.params);
+			outdata.data = transformData(this.hcdata, display, this.type, this.index, this.dataparams, this.params, parseFloat($('#idobservationtime').val()));
 			outdata.color = this.color;
 			if (this.type < 0) {
 				try {
@@ -481,6 +481,7 @@ $( document ).ready(function() {
 				$('#idplotymax0').val(1.1e-12.toExponential());
 				$('#idplotymax1').val(1.1e-6.toExponential());
 				$('#idplotymax2').val(1.1e3.toExponential());
+				$('#idobservationtime').val(-1.0e0.toExponential());
 				plotGraph(plotDisplay);
 			})
 			.on('click', 'div.expand-button', function() {

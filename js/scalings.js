@@ -1,5 +1,8 @@
-function transformData(data, display, type, index, dataparams, params) {
+function transformData(data, display, type, index, dataparams, params, observationtime) {
 	var outdata = data;
+	
+	var T = 1.0e-6
+	if ( observationtime > 0 ) { T = observationtime }
 	
 	switch(type) {
 		case 0: // PTAs
@@ -24,7 +27,7 @@ function transformData(data, display, type, index, dataparams, params) {
 			outdata = toPSD(outdata);
 			break;
 		case 2:
-			outdata = toEnergySpec(outdata);
+			outdata = toEnergySpec(outdata, T);
 			break;
 	}
 	return outdata;
@@ -131,11 +134,11 @@ function toPSD(data) {
 	});
 }
 
-function toEnergySpec(data) {
+function toEnergySpec(data,T) {
 	var H0 = 3.240779291010696e-18;
 	return data.map(function(val) {
 		var f = val[0];
 		var hc = val[1];
-		return [f, 2*Math.pow(Math.PI*f*hc/H0,2)];
+		return [f, 2*Math.pow(Math.PI*f*hc/H0,2)/Math.sqrt(f*T)];
 	});
 }
