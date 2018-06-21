@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 	// ** Define global variables **
-	var updateDate = "22nd June 2018";
+	var updateDate = "21 June 2018";
 
 	var plotDisplay = 0;
 	var yLabels = ["Characteristic Strain","\u221A( Power Spectral Density / Hz\u207B\u00B9 )","\u03A9 h\u00B2\u2081\u2080\u2080"];
