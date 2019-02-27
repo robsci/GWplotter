@@ -220,7 +220,7 @@
 "10" : {"name" : "EPTA", 
 "datafile" : "data\/detectors\/EPTA.json", 
 "type" : 0, 
-"default" : 1, 
+"default" : 0, 
 "color" : "rgb(0,0,0)", 
 "plotlabels" : [
 	"EPTA", 
@@ -250,7 +250,7 @@
 "11" : {"name" : "IPTA", 
 "datafile" : "data\/detectors\/IPTA.json", 
 "type" : 0, 
-"default" : 0, 
+"default" : 1, 
 "color" : "rgb(0,0,0)", 
 "plotlabels" : [
 	"IPTA", 
@@ -478,7 +478,7 @@
 "20" : {"name" : "Advanced LIGO (aLIGO) - O1 sensitivity", 
 "datafile" : "data\/detectors\/aLIGO-O1.json", 
 "type" : 1, 
-"default" : 1, 
+"default" : 0, 
 "color" : "rgb(0,0,0)", 
 "plotlabels" : [
 	"aLIGO (O1)", 
@@ -523,7 +523,31 @@
 		0.003
 	]
 ]},
-"22" : {"name" : "Virgo", 
+"22" : {"name" : "LIGO A+ (A+)", 
+"datafile" : "data\/detectors\/Aplus.json", 
+"type" : 1, 
+"default" : 0, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"A+", 
+	"A+", 
+	"A+"
+], 
+"labelpos" : [
+[
+		8.0e4, 
+		1.51e-20
+	], 
+[
+		8.0e4, 
+		8.834e-24
+	], 
+[
+		2.0e4, 
+		0.0003
+	]
+]},
+"23" : {"name" : "Virgo", 
 "datafile" : "data\/detectors\/VIRGO.json", 
 "type" : 1, 
 "default" : 0, 
@@ -547,7 +571,7 @@
 		0.1
 	]
 ]},
-"23" : {"name" : "Advanced Virgo (AdV)", 
+"24" : {"name" : "Advanced Virgo (AdV)", 
 "datafile" : "data\/detectors\/aVIRGO.json", 
 "type" : 1, 
 "default" : 0, 
@@ -571,7 +595,7 @@
 		0.03
 	]
 ]},
-"24" : {"name" : "KAGRA", 
+"25" : {"name" : "KAGRA", 
 "datafile" : "data\/detectors\/KAGRA.json", 
 "type" : 1, 
 "default" : 0, 
@@ -596,7 +620,7 @@
 	]
 ]
 },
-"25" : {"name" : "Einstein Telescope (ET)", 
+"26" : {"name" : "Einstein Telescope (ET)", 
 "datafile" : "data\/detectors\/ET.json", 
 "type" : 1, 
 "default" : 0, 
@@ -620,7 +644,7 @@
 		0.0001 
 	]
 ]},
-"26" : {"name" : "ALIA", 
+"27" : {"name" : "ALIA", 
 "datafile" : "data\/detectors\/ALIA.json", 
 "type" : 2, 
 "default" : 0, 
@@ -644,7 +668,7 @@
 		2.0e-10
 	]
 ]},
-"27" : {"name" : "Type IA supernovae", 
+"28" : {"name" : "Type IA supernovae", 
 "datafile" : "data\/sources\/supernovae_type1A.json", 
 "type" : -2, 
 "default" : 1, 
@@ -668,7 +692,7 @@
 		0.000015
 	]
 ]},
-"28" : {"name" : "GW150914", 
+"29" : {"name" : "GW150914", 
 "datafile" : "data\/sources\/GW150914.json", 
 "type" : -3, 
 "default" : 1, 
@@ -692,7 +716,7 @@
 		0.15
 	]
 ]},
-"29" : {"name" : "Cosmic Explorer (CE)", 
+"30" : {"name" : "Cosmic Explorer (CE)", 
 "datafile" : "data\/detectors\/CosmicExplorer.json", 
 "type" : 1, 
 "default" : 0, 
@@ -714,30 +738,6 @@
 [
 		2.0e4, 
 		0.00003 
-	]
-]},
-"30" : {"name" : "LIGO A+ (A+)", 
-"datafile" : "data\/detectors\/Aplus.json", 
-"type" : 1, 
-"default" : 0, 
-"color" : "rgb(0,0,0)", 
-"plotlabels" : [
-	"A+", 
-	"A+", 
-	"A+"
-], 
-"labelpos" : [
-[
-		8.0e4, 
-		1.51e-20
-	], 
-[
-		8.0e4, 
-		8.834e-24
-	], 
-[
-		2.0e4, 
-		0.0003
 	]
 ]},
 "31" : {"name" : "TianQin", 
@@ -762,30 +762,6 @@
 [
 		1.0e0, 
 		9.0e-7 
-	]
-]},
-"32" : {"name" : "Advanced LIGO (aLIGO) - Design Sensitivity", 
-"datafile" : "data\/detectors\/aLIGO.json", 
-"type" : 1, 
-"default" : 1, 
-"color" : "rgb(0,0,0)", 
-"plotlabels" : [
-	"aLIGO", 
-	"aLIGO", 
-	"aLIGO"
-], 
-"labelpos" : [
-[
-		8.0e4, 
-		5.68e-20
-	], 
-[
-		8.0e4, 
-		6.856e-23
-	], 
-[
-		2.0e4, 
-		0.003
 	]
 ]}
 }
