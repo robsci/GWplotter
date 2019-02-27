@@ -310,7 +310,7 @@
 "13" : {"name" : "eLISA", 
 "datafile" : "data\/detectors\/eLISA.json", 
 "type" : 2, 
-"default" : 1, 
+"default" : 0, 
 "color" : "rgb(0,0,0)", 
 "plotlabels" : [
 	"eLISA", 
@@ -334,7 +334,7 @@
 "14" : {"name" : "LISA", 
 "datafile" : "data\/detectors\/LISA.json", 
 "type" : 2, 
-"default" : 0, 
+"default" : 1, 
 "color" : "rgb(0,0,0)", 
 "plotlabels" : [
 	"LISA", 
@@ -475,7 +475,7 @@
 		0.3
 	]
 ]},
-"20" : {"name" : "aLIGO - O1 sensitivity", 
+"20" : {"name" : "Advanced LIGO (aLIGO) - O1 sensitivity", 
 "datafile" : "data\/detectors\/aLIGO-O1.json", 
 "type" : 1, 
 "default" : 1, 
@@ -499,8 +499,8 @@
 		0.01
 	]
 ]},
-"21" : {"name" : "aLIGO - Design Sensitivity", 
-"datafile" : "data\/detectors\/aLIGO.json", 
+"21" : {"name" : "Advanced LIGO (aLIGO) - Design Sensitivity", 
+"datafile" : "data\/detectors\/aLIGODesign.json", 
 "type" : 1, 
 "default" : 1, 
 "color" : "rgb(0,0,0)", 
@@ -547,7 +547,7 @@
 		0.1
 	]
 ]},
-"23" : {"name" : "AdV", 
+"23" : {"name" : "Advanced Virgo (AdV)", 
 "datafile" : "data\/detectors\/aVIRGO.json", 
 "type" : 1, 
 "default" : 0, 
@@ -596,7 +596,7 @@
 	]
 ]
 },
-"25" : {"name" : "ET", 
+"25" : {"name" : "Einstein Telescope (ET)", 
 "datafile" : "data\/detectors\/ET.json", 
 "type" : 1, 
 "default" : 0, 
@@ -609,15 +609,15 @@
 "labelpos" : [
 [
 		8.0e4, 
-		1.51e-20
+		7.55e-21
 	], 
 [
 		8.0e4, 
-		8.834e-24
+		3.18e-24
 	], 
 [
 		2.0e4, 
-		0.0003
+		0.0001 
 	]
 ]},
 "26" : {"name" : "ALIA", 
@@ -705,14 +705,87 @@
 "labelpos" : [
 [
 		8.0e4, 
-		7.55e-21
+		3.90e-21
 	], 
 [
 		8.0e4, 
-		3.18e-24
+		1.14e-24
 	], 
 [
 		2.0e4, 
-		0.0001 
+		0.00003 
 	]
-]}}
+]},
+"30" : {"name" : "LIGO A+ (A+)", 
+"datafile" : "data\/detectors\/Aplus.json", 
+"type" : 1, 
+"default" : 0, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"A+", 
+	"A+", 
+	"A+"
+], 
+"labelpos" : [
+[
+		8.0e4, 
+		1.51e-20
+	], 
+[
+		8.0e4, 
+		8.834e-24
+	], 
+[
+		2.0e4, 
+		0.0003
+	]
+]},
+"31" : {"name" : "TianQin", 
+"datafile" : "data\/detectors\/TianQin.json", 
+"type" : 2, 
+"default" : 0, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"TianQin", 
+	"TianQin", 
+	"TianQin"
+], 
+"labelpos" : [
+[
+		2.5e0, 
+		1.5e-18
+	], 
+[
+		2.5e0, 
+		6.00e-19
+	], 
+[
+		1.0e0, 
+		9.0e-7 
+	]
+]},
+"32" : {"name" : "Advanced LIGO (aLIGO) - Design Sensitivity", 
+"datafile" : "data\/detectors\/aLIGO.json", 
+"type" : 1, 
+"default" : 1, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"aLIGO", 
+	"aLIGO", 
+	"aLIGO"
+], 
+"labelpos" : [
+[
+		8.0e4, 
+		5.68e-20
+	], 
+[
+		8.0e4, 
+		6.856e-23
+	], 
+[
+		2.0e4, 
+		0.003
+	]
+]}
+}
