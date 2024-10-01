@@ -427,7 +427,9 @@ $( document ).ready(function() {
 				"T" : 20*365.25*24*60*60, 
 				"deltaT" : 1.20960e6, 
 				"deltatrms" : 1.0e-7, 
-				"Np" : 100.0
+				"Np" : 100.0,
+				"log10A_irn": -15.0,
+				"gamma_irn": 2.667,
 			}
 		};
 		var PTAdataset = new dataset(PTAobj);
@@ -476,9 +478,9 @@ $( document ).ready(function() {
 			.on('click', '#plotreset', function() {
 				$('#idplotfmin0,#idplotfmin1,#idplotfmin2').val(0.4e-10.toExponential());
 				$('#idplotfmax0,#idplotfmax1,#idplotfmax2').val(1.2e6.toExponential());
-				$('#idplotymin0,#idplotymin1').val(1e-26.toExponential());
+				$('#idplotymin0,#idplotymin1').val(1e-25.toExponential());
 				$('#idplotymin2').val(1e-15.toExponential());
-				$('#idplotymax0').val(1.1e-12.toExponential());
+				$('#idplotymax0').val(1e-11.toExponential());
 				$('#idplotymax1').val(1.1e-6.toExponential());
 				$('#idplotymax2').val(1.1e3.toExponential());
 				plotGraph(plotDisplay);
@@ -546,6 +548,20 @@ $( document ).ready(function() {
 				var newval = parseFloat($(this).val());
 				if (!isNaN(newval)) {
 					datasets[$(this).attr('name').slice(0,-5)].params.deltatrms = newval;
+					plotGraph(plotDisplay);
+				}
+			})
+			.on('change', 'input.log10A_irn', function() {
+				var newval = parseInt($(this).val());
+				if (!isNaN(newval)) {
+					datasets[$(this).attr('name').slice(0,-10)].params.log10A_irn = newval;
+					plotGraph(plotDisplay);
+				}
+			})
+			.on('change', 'input.gamma_irn', function() {
+				var newval = parseInt($(this).val());
+				if (!isNaN(newval)) {
+					datasets[$(this).attr('name').slice(0,-9)].params.gamma_irn = newval;
 					plotGraph(plotDisplay);
 				}
 			})

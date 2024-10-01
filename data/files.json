@@ -11,7 +11,7 @@
 "labelpos" : [
 [
 		4.50e-11, 
-		1.50e-13
+		1.0e-13
 	], 
 [
 		4.50e-11, 
@@ -130,11 +130,11 @@
 ], 
 "labelpos" : [
 [
-		9.0e-7, 
+		1.25e-6, 
 		2.0e-20
 	], 
 [
-		9.0e-7, 
+		1.25e-6, 
 		2.0e-19
 	], 
 [
@@ -217,11 +217,45 @@
 	]
 ], 
 "params" : {"A" : 1.0}},
-"10" : {"name" : "EPTA", 
-"datafile" : "data\/detectors\/EPTA.json", 
+"10" : {"name" : "NANOGrav 15yr", 
+"datafile" : "data\/detectors\/IPTA.json",
+"_comment": " data file does not actually get used",
 "type" : 0, 
 "default" : 0, 
 "color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"NANOGrav", 
+	"NANOGrav", 
+	"NANOGrav"
+], 
+"labelpos" : [
+[
+		2.0e-6, 
+		5.0e-13
+	], 
+[
+		2.0e-6, 
+		6.0e-10
+	], 
+[
+		1.80e-6, 
+		2.0
+	]
+], 
+"params" : {
+	"T" : 498610079.99999994, 
+	"deltaT" : 1.20960e6,
+	"deltatrms" : 1.0e-7, 
+	"Np" : 67.0,
+	"log10A_irn": -13.0,
+	"gamma_irn": 2.667
+}},
+"11" : {"name" : "EPTA DR2", 
+"datafile" : "data\/detectors\/EPTA.json",
+"_comment": " data file does not actually get used",
+"type" : 0, 
+"default" : 0,
+"color" : "rgb(0,0,0)",
 "plotlabels" : [
 	"EPTA", 
 	"EPTA", 
@@ -245,17 +279,53 @@
 	"T" : 3.155760e8, 
 	"deltaT" : 1.20960e6, 
 	"deltatrms" : 1.0e-7, 
-	"Np" : 5.0
+	"Np" : 25.0,
+	"log10A_irn": -13.0,
+	"gamma_irn": 2.667
 }},
-"11" : {"name" : "IPTA", 
-"datafile" : "data\/detectors\/IPTA.json", 
+"12" : {"name" : "PPTA DR3",
+"datafile" : "data\/detectors\/IPTA.json",
+"_comment": " data file does not actually get used",
+"type" : 0, 
+"default" : 0, 
+"color" : "rgb(0,0,0)", 
+"plotlabels" : [
+	"PPTA", 
+	"PPTA", 
+	"PPTA"
+], 
+"labelpos" : [
+[
+		2.0e-6, 
+		5.0e-13
+	], 
+[
+		2.0e-6, 
+		6.0e-10
+	], 
+[
+		1.80e-6, 
+		2.0
+	]
+], 
+"params" : {
+	"T" : 568036800.0,
+	"deltaT" : 1.20960e-6,
+	"deltatrms" : 1814400, 
+	"Np" : 32,
+	"log10A_irn": -13.0,
+	"gamma_irn": 2.667
+}},
+"13" : {"name" : "IPTA DR3", 
+"datafile" : "data\/detectors\/IPTA.json",
+"_comment": " data file does not actually get used",
 "type" : 0, 
 "default" : 1, 
 "color" : "rgb(0,0,0)", 
 "plotlabels" : [
-	"IPTA", 
-	"IPTA", 
-	"IPTA"
+	"IPTA DR3", 
+	"IPTA DR3", 
+	"IPTA DR3"
 ], 
 "labelpos" : [
 [
@@ -272,13 +342,16 @@
 	]
 ], 
 "params" : {
-	"T" : 4.733640e8, 
+	"T" : 694267200.0, 
 	"deltaT" : 1.20960e6, 
 	"deltatrms" : 1.0e-7, 
-	"Np" : 20.0
+	"Np" : 120,
+	"log10A_irn": -13.0,
+	"gamma_irn": 2.667
 }},
-"12" : {"name" : "SKA", 
-"datafile" : "data\/detectors\/SKA.json", 
+"14" : {"name" : "SKA", 
+"datafile" : "data\/detectors\/SKA.json",
+"_comment": " data file does not actually get used",
 "type" : 0, 
 "default" : 0, 
 "color" : "rgb(0,0,0)", 
@@ -305,9 +378,11 @@
 	"T" : 6.311520e8, 
 	"deltaT" : 1.20960e6, 
 	"deltatrms" : 3.0e-8, 
-	"Np" : 100.0
+	"Np" : 100.0,
+	"log10A_irn": -13.0,
+	"gamma_irn": 2.667
 }},
-"13" : {"name" : "eLISA", 
+"15" : {"name" : "eLISA", 
 "datafile" : "data\/detectors\/eLISA.json", 
 "type" : 2, 
 "default" : 0, 
@@ -331,7 +406,7 @@
 		9.0e-7
 	]
 ]},
-"14" : {"name" : "LISA", 
+"16" : {"name" : "LISA", 
 "datafile" : "data\/detectors\/LISA.json", 
 "type" : 2, 
 "default" : 1, 
@@ -355,7 +430,7 @@
 		2.0e-10
 	]
 ]},
-"15" : {"name" : "DECIGO", 
+"17" : {"name" : "DECIGO", 
 "datafile" : "data\/detectors\/DECIGO.json", 
 "type" : 2, 
 "default" : 0, 
@@ -379,7 +454,7 @@
 		6.0e-13
 	]
 ]},
-"16" : {"name" : "BBO", 
+"18" : {"name" : "BBO", 
 "datafile" : "data\/detectors\/BBO.json", 
 "type" : 2, 
 "default" : 0, 
@@ -403,7 +478,7 @@
 		1.820e-14
 	]
 ]},
-"17" : {"name" : "TAMA", 
+"19" : {"name" : "TAMA", 
 "datafile" : "data\/detectors\/TAMA.json", 
 "type" : 1, 
 "default" : 0, 
@@ -427,7 +502,7 @@
 		3.0
 	]
 ]},
-"18" : {"name" : "GEO", 
+"20" : {"name" : "GEO", 
 "datafile" : "data\/detectors\/GEO.json", 
 "type" : 1, 
 "default" : 0, 
@@ -451,7 +526,7 @@
 		1.0
 	]
 ]},
-"19" : {"name" : "LIGO", 
+"21" : {"name" : "LIGO", 
 "datafile" : "data\/detectors\/LIGO.json", 
 "type" : 1, 
 "default" : 0, 
@@ -475,7 +550,7 @@
 		0.3
 	]
 ]},
-"20" : {"name" : "Advanced LIGO (aLIGO) - O1 sensitivity", 
+"22" : {"name" : "Advanced LIGO (aLIGO) - O1 sensitivity", 
 "datafile" : "data\/detectors\/aLIGO-O1.json", 
 "type" : 1, 
 "default" : 0, 
@@ -499,7 +574,7 @@
 		0.01
 	]
 ]},
-"21" : {"name" : "Advanced LIGO (aLIGO) - Design Sensitivity", 
+"23" : {"name" : "Advanced LIGO (aLIGO) - Design Sensitivity", 
 "datafile" : "data\/detectors\/aLIGODesign.json", 
 "type" : 1, 
 "default" : 1, 
@@ -523,7 +598,7 @@
 		0.003
 	]
 ]},
-"22" : {"name" : "LIGO A+ (A+)", 
+"24" : {"name" : "LIGO A+ (A+)", 
 "datafile" : "data\/detectors\/Aplus.json", 
 "type" : 1, 
 "default" : 0, 
@@ -547,7 +622,7 @@
 		0.0003
 	]
 ]},
-"23" : {"name" : "Virgo", 
+"25" : {"name" : "Virgo", 
 "datafile" : "data\/detectors\/VIRGO.json", 
 "type" : 1, 
 "default" : 0, 
@@ -571,7 +646,7 @@
 		0.1
 	]
 ]},
-"24" : {"name" : "Advanced Virgo (AdV)", 
+"26" : {"name" : "Advanced Virgo (AdV)", 
 "datafile" : "data\/detectors\/aVIRGO.json", 
 "type" : 1, 
 "default" : 0, 
@@ -595,7 +670,7 @@
 		0.03
 	]
 ]},
-"25" : {"name" : "KAGRA", 
+"27" : {"name" : "KAGRA", 
 "datafile" : "data\/detectors\/KAGRA.json", 
 "type" : 1, 
 "default" : 0, 
@@ -620,7 +695,7 @@
 	]
 ]
 },
-"26" : {"name" : "Einstein Telescope (ET)", 
+"28" : {"name" : "Einstein Telescope (ET)", 
 "datafile" : "data\/detectors\/ET.json", 
 "type" : 1, 
 "default" : 0, 
@@ -644,7 +719,7 @@
 		0.0001 
 	]
 ]},
-"27" : {"name" : "ALIA", 
+"29" : {"name" : "ALIA", 
 "datafile" : "data\/detectors\/ALIA.json", 
 "type" : 2, 
 "default" : 0, 
@@ -668,7 +743,7 @@
 		2.0e-10
 	]
 ]},
-"28" : {"name" : "Type IA supernovae", 
+"30" : {"name" : "Type IA supernovae", 
 "datafile" : "data\/sources\/supernovae_type1A.json", 
 "type" : -2, 
 "default" : 1, 
@@ -692,7 +767,7 @@
 		0.000015
 	]
 ]},
-"29" : {"name" : "GW150914", 
+"31" : {"name" : "GW150914", 
 "datafile" : "data\/sources\/GW150914.json", 
 "type" : -3, 
 "default" : 1, 
@@ -716,7 +791,7 @@
 		0.15
 	]
 ]},
-"30" : {"name" : "Cosmic Explorer (CE)", 
+"32" : {"name" : "Cosmic Explorer (CE)", 
 "datafile" : "data\/detectors\/CosmicExplorer.json", 
 "type" : 1, 
 "default" : 0, 
@@ -740,7 +815,7 @@
 		0.00003 
 	]
 ]},
-"31" : {"name" : "TianQin", 
+"33" : {"name" : "TianQin", 
 "datafile" : "data\/detectors\/TianQin.json", 
 "type" : 2, 
 "default" : 0, 
